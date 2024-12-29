@@ -1,0 +1,116 @@
+.main {
+  margin-bottom: 4.7%;
+
+  @include tablet{
+    margin-bottom: 10%;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title-container2 { 
+      position: relative;
+    }
+
+    &__title {
+      font-size: 64px;
+      margin-bottom: 15px;
+
+      @include tablet {
+        font-size: 48px;
+      }
+
+      @include mini-tablet {
+        font-size: 30px;
+      }
+
+      @include mobile {
+        font-size: 28px;
+      }
+    }
+
+    &__subtitle {
+      display: flex;
+      font-size: 24px;
+      text-wrap: wrap;
+      color: var(--color-gray-alt);
+      margin-bottom: 15px;
+
+      @include tablet-above {
+        font-size: 22px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include mini-tablet {
+        font-size: 16px;
+      }
+    }
+
+    &__button {
+      align-self: flex-start;
+      padding: 1em 3.3em;
+      border: none;
+      color: var(--color-light);
+      font-size: 36px;
+      font-weight: normal;
+      border-radius: var(--border-radius-large);
+      background-color: var(--color-dark);
+
+      @include tablet {
+        padding: 1em 2.5em;
+        font-size: 24px;
+      }
+
+      @include mini-tablet {
+        font-size: 18px;
+        padding: 1em 2em;
+      }
+
+      @include mobile {
+        padding: 1em 6em;
+      }
+    }
+
+
+    &__lamp-sticker {
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+
+      @media (max-width: 1150px) { 
+        display: none;
+      }
+
+      animation-name: rotation;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

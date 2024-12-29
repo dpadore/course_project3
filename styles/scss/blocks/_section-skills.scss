@@ -1,0 +1,130 @@
+.skills {
+  margin-bottom: 16em;
+  @include tablet{
+    margin-bottom: 5em;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7.6%;
+
+    @include tablet {
+      font-size: 36px;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(4, auto);
+    }
+
+    &__speaking {
+      display: flex;
+      grid-row: span 2;
+
+      @include tablet {
+        grid-row: auto;
+      }
+    }
+
+    &__listening {
+      grid-column: span 2;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+
+      @include tablet {
+        grid-column: auto;
+        flex-direction: column-reverse;
+      }
+
+      &__img {
+        justify-content: flex-end;
+        flex: 1 1 auto;
+        margin-bottom: 0;
+
+        @include tablet {
+          flex: 0 1 auto;
+          margin-bottom: 15px;
+          
+        }
+      }
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include tablet {
+          flex: 1 1 auto;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-dark);
+  }
+
+  &__img {
+    display: flex;
+    flex: 0 1 auto;
+    align-self: center;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+    flex: 1 1 auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-gray-alt);
+  }
+
+  &__button {
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1.1em 4em;
+  }
+
+
+  @include hover { 
+    transform: scale(1.03);
+    border: 1px solid var(--color-accent);
+    box-shadow: 2px 2px 20px var(--color-dark);
+    transition: 0.5s;
+  }
+}
+

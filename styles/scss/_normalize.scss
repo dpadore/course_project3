@@ -1,0 +1,35 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0; 
+}
+
+:where(ul[class]) {
+  list-style: none;
+}
+
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  margin: 0 auto;
+}
